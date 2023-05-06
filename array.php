@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body >
+       <!-- ARRAY STATEMENTS -->
+  
     <?php
         $cars = array("Benz", "Toyata", "Tesla", "Ford");
         echo "I like ". $cars[2] . " more, but i can buy " . $cars[0] . ", and " .$cars[3] . " if i want to buy it.";
