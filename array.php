@@ -133,7 +133,7 @@
             echo "<br>";
         }
 
-       // Sort Array (Descending Order), According to Value - asort()
+        // Sort Array (Descending Order), According to Value - asort()
 
         $ages = array("tofunmi"=>"15", "boluwatife"=>"12", "remi"=>"10");
         ksort($ages);
