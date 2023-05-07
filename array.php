@@ -41,7 +41,6 @@
         for ($i=0; $i < $arrlength; $i++) { 
             echo $names[$i];
             echo "<br> ";
-            echo "<br> ";
         }
     ?>
 
@@ -64,7 +63,83 @@
             echo "key=" . $x . ", value=" . $x_value;
             echo "<br> <br>";
         }
-    ?>     
+    ?>
+    
+    <!-- PHP Multidimensional Arrays -->
+    <?php
+    $cars = array (
+        array("Volvo",22,18),
+        array("BMW",15,13),
+        array("Saab",5,2),
+        array("Land Rover",17,15)
+      );
+        
+      echo $cars[0][0].": In stock: ".$cars[0][1].", sold: ".$cars[0][2].".<br>";
+      echo $cars[1][0].": In stock: ".$cars[1][1].", sold: ".$cars[1][2].".<br>";
+      echo $cars[2][0].": In stock: ".$cars[2][1].", sold: ".$cars[2][2].".<br>";
+      echo $cars[3][0].": In stock: ".$cars[3][1].", sold: ".$cars[3][2].".<br>";
+
+    ?>
+
+    <?php
+        //    loop through an Multidimensional array
+        $cars = array (
+            array("Volvo",22,18),
+            array("BMW",15,13),
+            array("Saab",5,2),
+            array("Land Rover",17,15)
+        );
+
+        for ($row=0; $row < 4; $row++) { 
+         echo "<P><b>Row number $row</b></p>";
+         echo "<ui>";
+         for ($col =0; $col < 3; $col++) { 
+           echo "<li>".$cars[$row][$col]."</li>";
+         }
+         echo "</ul>";
+         echo "<br> <br>";
+        }
+    ?>
+
+    <!-- PHP Sorting Arrays -->
+    <?php
+
+        // Sort Array in Ascending Order - sort()
+
+        $cars = array("Volvo", "BMW", "Toyota");
+        rsort($cars);
+        $clength = count($cars);
+        for ($x=0; $x < $clength; $x++) { 
+            echo $cars[$x];
+            echo"<br> ";
+        }
+
+        $numbers = array(9, 4, 6, 3, 7, 1);
+        sort($numbers);
+        $arrlength = count($numbers);
+        for ($y=0; $y < $arrlength ; $y++) { 
+           echo $numbers[$y];
+           echo"<br> ";
+        }
+
+        // Sort Array (Ascending Order), According to Value - asort()
+
+        $names = array("philip"=>"20", "nicholas"=>"17", "john"=>"14");
+        asort($names);
+        foreach($names as $i => $i_value) { 
+            echo "key=" . $i . ", value=" . $i_value;
+            echo "<br>";
+        }
+
+        $ages = array("tofunmi"=>"15", "boluwatife"=>"12", "remi"=>"10");
+        ksort($ages);
+        foreach($ages as $a => $a_value) { 
+            echo "key=" . $a . ", value=" . $a_value;
+            echo "<br>";
+        }
+
+
+        ?>
 
 
 </body>
