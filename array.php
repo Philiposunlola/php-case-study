@@ -104,7 +104,7 @@
     <!-- PHP Sorting Arrays -->
     <?php
 
-        // Sort Array in Ascending Order - sort()
+        // Sort Array in Descending Order - sort()
 
         $cars = array("Volvo", "BMW", "Toyota");
         rsort($cars);
@@ -113,6 +113,8 @@
             echo $cars[$x];
             echo"<br> ";
         }
+
+        // Sort Array in Ascending Order - sort()
 
         $numbers = array(9, 4, 6, 3, 7, 1);
         sort($numbers);
@@ -130,6 +132,8 @@
             echo "key=" . $i . ", value=" . $i_value;
             echo "<br>";
         }
+
+       // Sort Array (Descending Order), According to Value - asort()
 
         $ages = array("tofunmi"=>"15", "boluwatife"=>"12", "remi"=>"10");
         ksort($ages);
