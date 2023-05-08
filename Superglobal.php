@@ -75,13 +75,22 @@
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // collect value of input field
-            $name = $_POST['lname'];
+            $name = $_POST['fname'];
             if (empty($name)) {
                 echo "Name is empty";
             } else {
                 echo $name;
+                echo "<br> <br>";
             }
         }
     ?>
+
+    <!-- PHP Superglobal - $_GET -->
+    <a href="test_get.php?subject=PHP&web=W3schools.com">Test $GET</a>
+
+    <?php
+        echo "Study " . $_GET['subject'] . " at " . $_GET['web'];
+    ?>
+        
 
 </body>    
