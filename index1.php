@@ -174,6 +174,29 @@
 
     <!-- PHP Regular Expressions -->
 
+    <?php
+        $str = "Apples and bananas.";
+        $pattern = "/ba(na){2}/i";
+        echo preg_match($pattern, $str);
+        echo "<br> <br>";
+
+        
+        $str = "The rain in SPAIN falls mainly on the plains.";
+        $pattern = "/ain/i";
+        echo preg_match_all($pattern, $str); 
+        echo "<br> <br>";
+
+        $str = "MyVillage";
+        $pattern = "/myvillage/i";
+        echo preg_match($pattern, $str);
+        echo "<br> <br>";
+
+        $str = "MyVillage";
+        $pattern = "/myvillage/i";
+        echo preg_replace($pattern, "philip", $str);
+
+    ?>
+
 </body >
 </html>
 
