@@ -15,8 +15,8 @@
         Website: <input type="text" name="website"><br><br>
         Comment: <textarea type="comment" rows="5" cols="40"></textarea><br><br>
         Gender:<input type="radio" name="gender" value="female">Female<br><br>
-                <input type="radio" name="gender" value="male">Male<br><br>
-                <input type="radio" name="gender" value="other">Other<br><br>
+        <input type="radio" name="gender" value="male">Male<br><br>
+        <input type="radio" name="gender" value="other">Other<br><br>
 
 
     </form>
