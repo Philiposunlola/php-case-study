@@ -74,7 +74,7 @@
               }
             
               if (empty($_POST["comment"])) {
-                $commentErr = "comment is required";
+                $commentErr = "";
               } else {
                 $comment = test_input($_POST["comment"]);
               }
