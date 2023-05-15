@@ -46,7 +46,21 @@
         echo date("Y-m-d h:i:sa", $d) . "<br>";
 
         $d=strtotime("+3 Months");
-        echo date("Y-m-d h:i:sa", $d) . "<br>";
+        echo date("Y-m-d h:i:sa", $d) . "<br> <br>";
+
+        // More on dates examples 
+
+        $startdate = strtotime("Saturday");
+        $endtime = strtotime("+6 weeks", $startdate);
+
+        while ($startdate < $endtime) {
+            echo date("M d", $startdate) . "<br>";
+            $startdate = strtotime("+1 week", $startdate) . "<br> <br>";
+        }
+
+        $d1 = strtotime("july 04");
+        $d2 = ceil(($d1-time())/60/60/24);
+        echo "There are " . $d2 ." days until 4th of july.";
     ?>
 
 </body>
