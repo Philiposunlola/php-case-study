@@ -51,11 +51,12 @@
         // More on dates examples 
 
         $startdate = strtotime("Saturday");
-        $endtime = strtotime("+6 weeks", $startdate);
+        $enddate = strtotime("+6 weeks", $startdate);
 
-        while ($startdate < $endtime) {
+        while ($startdate < $enddate) {
             echo date("M d", $startdate) . "<br>";
-            $startdate = strtotime("+1 week", $startdate) . "<br> <br>";
+            $startdate = strtotime("+1 week", $startdate);
+            echo "<br>";
         }
 
         $d1 = strtotime("july 04");
