@@ -1,4 +1,16 @@
 body {
     background-color: powderblue;
     margin-bottom: 500px;
-  };
+  }
+
+.error {
+    color: #FF0000;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
