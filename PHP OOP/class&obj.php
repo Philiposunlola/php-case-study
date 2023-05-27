@@ -19,27 +19,65 @@
                 public $color;
 
                 // Methods
-                function set_name($name){
+                function __construct($name, $color) {
                  $this->name = $name;
+                 $this->color = $color;
                 }
                 function get_name() {
                     return $this->name;
-                } function set_color($color){
-                    $this->color = $color;
                 }
                 function get_color() {
                     return $this->color;
                 }
             }
 
-            $apple = new Fruit();
-            $apple->set_name('Apple');
-            $apple->set_color('Black');
+            $apple = new Fruit("Apple", "Black");
 
             echo "Name: " . $apple->get_name();
             echo "<br>";
             echo "Color: " . $apple->get_color();
             echo "<br>";
+        ?>
+
+            <!-- PHP - instanceof -->
+        <?php
+            class Investors {
+            // Properties
+                public $name;
+                public $color;
+
+                // Methods
+                function set_name($name) {
+                    $this->name = $name;
+                }
+                function get_name() {
+                    return $this->name;
+                }
+            }
+
+            $apple = new Investors();
+            var_dump($apple instanceof investors);
+            echo "<br>";
+        ?>
+
+        <!-- PHP OOP - Destructor -->
+        <?php
+            class Car{
+            // Properties
+                var $name;
+                var $color;
+
+                // Methods
+                function __construct($name, $color) {
+                    $this->name = $name;
+                    $this->color = $color; 
+                }
+                function __destruct() {
+                    echo "The fruit is {$this->name} and the color is {$this->color}."; 
+                }
+            }
+
+            $apple = new Car("Benz", "red");
         ?>
 
         
