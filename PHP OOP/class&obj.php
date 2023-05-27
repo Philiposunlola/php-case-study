@@ -32,7 +32,6 @@
             }
 
             $apple = new Fruit("Apple", "Black");
-
         ?>
 
             <!-- PHP - instanceof -->
