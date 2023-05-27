@@ -10,26 +10,25 @@
 
 <body>
   
-    <!-- objects statements  -->
+    <!-- objects statements -->
     <?php
-    class Car {
-    public $color;
-    public $model;
-    public function __construct($color, $model) {
-        $this->color = $color;
-        $this->model = $model;
-    }
-    public function message() {
-        return "My car is a " . $this->color . " " . $this->model . "!";
-    }
-    }
+        class Car {
+            public $color;
+            public $model;
+            function __construct($color, $model) {
+                $this->color = $color;
+                $this->model = $model;
+            }
+            function __destruct() {
+                echo $this-> color;
+                echo "<br>";
+                echo $this -> model;
+                echo "<br>";
+                echo "<br>";
+            }
+        }
 
-    $myCar = new Car("black", "Volvo");
-    echo $myCar -> message();
-    echo "<br>";
-    $myCar = new Car("red", "Toyota");
-    echo $myCar -> message();
-    echo "<br>";
-    echo "<br>"
+        $myCar = new Car("black", "Volvo");
+        $myCar = new Car("red", "Toyota");
     ?>
 </body>    

@@ -23,20 +23,16 @@
                  $this->name = $name;
                  $this->color = $color;
                 }
-                function get_name() {
-                    return $this->name;
-                }
-                function get_color() {
-                    return $this->color;
+                function __destruct() {
+                    echo "Name: " . $this->name;
+                    echo "<br>";
+                    echo "Color: " . $this->color;
+                    echo "<br>";
                 }
             }
 
             $apple = new Fruit("Apple", "Black");
 
-            echo "Name: " . $apple->get_name();
-            echo "<br>";
-            echo "Color: " . $apple->get_color();
-            echo "<br>";
         ?>
 
             <!-- PHP - instanceof -->
@@ -73,13 +69,11 @@
                     $this->color = $color; 
                 }
                 function __destruct() {
-                    echo "The fruit is {$this->name} and the color is {$this->color}."; 
+                    echo "The car is {$this->name} and the color is {$this->color}."; 
                 }
             }
 
             $apple = new Car("Benz", "red");
         ?>
-
-        
     </body>
 </html>
