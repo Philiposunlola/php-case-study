@@ -11,38 +11,28 @@
         </style>
     </head>
     <body>
-        <!-- PHP  CLASS && OBJECT -->
+
         <?php
             class Fruit {
-                // Properties
-                public $name;
-                public $color;
+            public $name;
+            public $color;
 
-                // Methods
-                function set_name($name) {
+            function __construct($name, $color) {
                     $this->name = $name;
+                    $this->color = $color;
                 }
                 function get_name() {
                     return $this->name;
-                }
-                function set_color($color) {
-                    $this->color = $color;
                 }
                 function get_color() {
                     return $this->color;
                 }
             }
 
-            $apple = new Fruit();
-            $apple->set_name('Apple');
-            $apple->set_color('Black');
+            $apple = new Fruit("Apple", "red");
             echo $apple->get_name();
             echo "<br>";
             echo $apple->get_color();
-            echo "<br>";
         ?>
-
-            <!-- PHP - instanceof -->
-
     </body>
 </html>

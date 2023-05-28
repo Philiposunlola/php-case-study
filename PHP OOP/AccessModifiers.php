@@ -11,38 +11,28 @@
         </style>
     </head>
     <body>
-        <!-- PHP  CLASS && OBJECT -->
+        <!-- PHP OOP - Access Modifiers -->
         <?php
             class Fruit {
-                // Properties
                 public $name;
                 public $color;
+                public $weight;
 
-                // Methods
                 function set_name($name) {
                     $this->name = $name;
-                }
-                function get_name() {
-                    return $this->name;
                 }
                 function set_color($color) {
                     $this->color = $color;
                 }
-                function get_color() {
-                    return $this->color;
+                function set_weight($weight) {
+                    $this->weight = $weight;
                 }
             }
 
-            $apple = new Fruit();
-            $apple->set_name('Apple');
-            $apple->set_color('Black');
-            echo $apple->get_name();
-            echo "<br>";
-            echo $apple->get_color();
-            echo "<br>";
+            $mango = new Fruit ();
+            $mango->set_name('Mango');
+            $mango->set_color('Yellow');
+            $mango->set_weight('200');
         ?>
-
-            <!-- PHP - instanceof -->
-
     </body>
 </html>
