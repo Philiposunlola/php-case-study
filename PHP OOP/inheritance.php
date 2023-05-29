@@ -31,6 +31,9 @@
                 }
               }
               $strawberry = new Strawberry("strawberry", "red");
+              echo $strawberry->get_name();
+              echo "<br>";
+              echo $strawberry->get_color();
         ?>
     </body>
 </html>

@@ -23,10 +23,26 @@
                     $this->color = $color;
                     $this->weight = $weight;
                 }
+
+                function get_name() {
+                    return $this->name;
+                }
+                function get_color() {
+                    return $this->color;
+                }
+                function get_weight() {
+                    return $this->weight;
+                }
+
             }
 
-            $mango = new Fruit ("Banana", "Green", "200");
-
+            $banana = new Fruit ("Banana", "Green", "200");
+            echo $banana->get_name();
+            echo "<br>";
+            echo $banana->get_color();
+            echo "<br>";
+            echo $banana->get_weight();
+            echo "<br>";
         ?>
     </body>
 </html>
