@@ -18,21 +18,15 @@
                 public $color;
                 public $weight;
 
-                function set_name($name) {
+                function __construct($name, $color, $weight) {
                     $this->name = $name;
-                }
-                function set_color($color) {
                     $this->color = $color;
-                }
-                function set_weight($weight) {
                     $this->weight = $weight;
                 }
             }
 
-            $mango = new Fruit ();
-            $mango->set_name('Mango');
-            $mango->set_color('Yellow');
-            $mango->set_weight('200');
+            $mango = new Fruit ("Banana", "Green", "200");
+
         ?>
     </body>
 </html>
