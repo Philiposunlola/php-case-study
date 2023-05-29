@@ -27,13 +27,12 @@
               // strawberry is inherited from fruit
               class Strawberry extends Fruit {
                 public function message() {
-                    echo "Am i a friut or a berry";
+                    echo "Am i a friut or a berry? ";
                 }
               }
               $strawberry = new Strawberry("strawberry", "red");
-              echo $strawberry->get_name();
-              echo "<br>";
-              echo $strawberry->get_color();
+              echo $strawberry->message();
+              echo $strawberry->intro();
         ?>
     </body>
 </html>
