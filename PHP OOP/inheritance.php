@@ -11,6 +11,8 @@
         </style>
     </head>
     <body?>
+
+        <!-- PHP OOP - Inheritance -->
         <?php
             class Fruit {
                 public $name;
@@ -22,17 +24,44 @@
                 public function intro() {
                   echo "The fruit is {$this->name} and the color is {$this->color}.";
                 }
-              }
+            }
 
               // strawberry is inherited from fruit
-              class Strawberry extends Fruit {
+            class Strawberry extends Fruit {
                 public function message() {
                     echo "Am i a friut or a berry? ";
                 }
-              }
+            }
               $strawberry = new Strawberry("strawberry", "red");
               echo $strawberry->message();
               echo $strawberry->intro();
+              echo "<br>";
+        ?>
+
+            <!-- PHP - Inheritance and the Protected Access Modifier -->
+        <?php
+            class Bags{
+                public $name;
+                public $color;
+                public function __construct($name, $color) {
+                    $this->name = $name;
+                    $this->color = $color;
+                }
+                protected function intro() {
+                    echo "The Bag is {$this->name} and the color is {$this->color}.";
+                }
+            }
+
+            class Nike extends Bags {
+                public function message() {
+                    echo "Am i Bag or a Nike? ";
+                    $this -> intro();
+                } 
+            }
+
+            // Try to call three methods from outside class
+            $Bags = new Nike("Nike", "White");  // OK. __construct() is public
+            $Bags->message(); // OK. message() is public
         ?>
     </body>
 </html>
