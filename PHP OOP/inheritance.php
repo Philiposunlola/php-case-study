@@ -79,7 +79,7 @@
                   }
                 }
                 
-                class addidas extends shoe {
+            class addidas extends shoe {
                   public $weight;
                   public function __construct($name, $color, $weight) {
                     $this->name = $name;
