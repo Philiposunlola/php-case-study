@@ -53,5 +53,31 @@
             echo $Benz->intro();
             echo "<br>"; 
         ?>
+
+        <!-- PHP - More Abstract Class Examples -->
+        <?php
+            abstract class ParentClass {
+                // abstract method with an argumnt 
+                abstract protected function prefixName($name);
+            }
+
+            class ChildClass extends ParentClass {
+                public function prefixName($name) {
+                    if ($name == "Osunlola philip") {
+                        $prefix = "Mr. ";
+                    }elseif ($name == "Tofunmi philip") {
+                        $prefix = "Mrs. ";
+                    }else {
+                        $prefix = "";
+                    }
+                    return "{$prefix} {$name}";
+                }
+            }
+
+            $class = new ChildClass;
+            echo $class->prefixName("Osunlola Philip");
+            echo "<br>";
+            echo $class->prefixName("Tofunmi Philip");
+        ?>
     </body>
 </html>
