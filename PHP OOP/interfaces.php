@@ -28,6 +28,8 @@
             echo "<br>";
         ?>
 
+        
+        <!-- ANOTHER EXAMPLE-->
         <?php
             // Interface definition
             interface School {

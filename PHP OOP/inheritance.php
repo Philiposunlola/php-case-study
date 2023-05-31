@@ -10,7 +10,7 @@
             .error {color: #FF0000;}
         </style>
     </head>
-    <body?>
+    <body>
 
         <!-- PHP OOP - Inheritance -->
         <?php
