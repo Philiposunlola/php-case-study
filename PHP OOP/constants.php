@@ -24,7 +24,7 @@
 
         <?php
         class Goodday {
-            const LEAVING_MESSAGE = "Thank you for visiting github.com/Philiposunlola!";
+            const LEAVING_MESSAGE = "Thank you for visiting https://github.com/Philiposunlola!";
             public function byebye() {
             echo self::LEAVING_MESSAGE;
             }

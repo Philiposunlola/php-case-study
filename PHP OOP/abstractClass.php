@@ -51,7 +51,7 @@
 
             $Benz = new benz ("Benz");
             echo $Benz->intro();
-            echo "<br>"; 
+            echo "<br><br>"; 
         ?>
 
         <!-- PHP - More Abstract Class Examples -->
@@ -63,9 +63,9 @@
 
             class ChildClass extends ParentClass {
                 public function prefixName($name) {
-                    if ($name == "Osunlola philip") {
+                    if ($name == "Osunlola Philip") {
                         $prefix = "Mr. ";
-                    }elseif ($name == "Tofunmi philip") {
+                    }elseif ($name == "Tofunmi Philip") {
                         $prefix = "Mrs. ";
                     }else {
                         $prefix = "";
@@ -78,6 +78,34 @@
             echo $class->prefixName("Osunlola Philip");
             echo "<br>";
             echo $class->prefixName("Tofunmi Philip");
+            echo "<br><br>";
+        ?>
+
+            <!-- Abstract method has an argument -->
+        <?php
+        abstract class BigClass {
+        // Abstract method with an argument
+        abstract protected function prefixName($name);
+        }
+
+        class SmallClass extends BigClass {
+        // The child class may define optional arguments that are not in the parent's abstract method
+            public function prefixName($name, $separator = ".", $greet = "Dear") {
+                if ($name == "Nicholas Osunlola") {
+                     $prefix = "Mr. ";
+                } elseif ($name == "John Osunlola") {
+                     $prefix = "Mrs. ";
+                } else {
+                      $prefix = "";
+                }
+                return "{$greet} {$prefix}{$separator} {$name}";
+            }
+        }
+
+        $class = new ChildClass;
+        echo $class->prefixName("Nicholas Osunlola");
+        echo "<br>";
+        echo $class->prefixName("John Osunlola");
         ?>
     </body>
 </html>
