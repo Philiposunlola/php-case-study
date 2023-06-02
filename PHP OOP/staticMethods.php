@@ -26,6 +26,7 @@
 
         <!-- PHP - More on Static Methods -->
         <?php
+        // A class can have both static and non-static methods. A static method can be accessed from a method in the same class using the self keyword and double colon (::):
             class greetings {
                 public static function welcome() {
                     echo "Hello Philip!"; 
@@ -37,6 +38,27 @@
             }
 
             new greetings();
+            echo "<br>"
+        ?>
+
+        <!-- Static methods can also be called from methods in other classes. To do this, the static method should be public: -->
+        <?php
+            class A {
+                public static function welcome(){
+                    echo "Hello Nicholas!";
+                }
+            }
+
+                class B {
+                    public function message() {
+                        A::welcome();
+                    }
+                }
+            
+
+            $obj = new B();
+            echo $obj -> message();
+            echo "<br>"
         ?>
     </body>
 </html>
