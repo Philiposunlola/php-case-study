@@ -41,8 +41,8 @@
             echo "<br>"
         ?>
 
-        <!-- Static methods can also be called from methods in other classes. To do this, the static method should be public: -->
         <?php
+        // Static methods can also be called from methods in other classes. To do this, the static method should be public:
             class A {
                 public static function welcome(){
                     echo "Hello Nicholas!";
@@ -55,10 +55,29 @@
                     }
                 }
             
-
             $obj = new B();
             echo $obj -> message();
             echo "<br>"
+        ?>
+
+        <?php
+        // To call a static method from a child class, use the parent keyword inside the child class. Here, the static method can be public or protected.
+                class domain {
+                    public static function getWebsiteName() {
+                        return "afromart.com.ng";
+                    } 
+                }
+
+                class domainAM extends domain {
+                    public $websiteName;
+                    public function __construct() {
+                        $this->websiteName = parent::getWebsiteName();
+                    }
+                }
+
+                $domainAM = new domainAM;
+                echo $domainAM -> websiteName;
+                echo "<br>";
         ?>
     </body>
 </html>
