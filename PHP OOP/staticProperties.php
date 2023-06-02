@@ -33,6 +33,28 @@
 
             $percent = new percent();
             echo $percent->staticValue(); 
+            echo "<br>";
+        ?>
+
+        <?php
+            // To call a static property from a child class, use the parent keyword inside the child class:
+            class digits{
+                public static $value = 200;
+            }
+
+            class x extends digits {
+                public function xStatic() {
+                    return parent::$value;
+                }
+            }
+
+            // Get value of an static property directly via child class
+            echo x::$value;
+
+            // or get value of static property 
+            $x = new x();
+            echo $x->xStatic();
+
         ?>
 
     </body>
