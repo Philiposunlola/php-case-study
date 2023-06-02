@@ -21,18 +21,22 @@
 
             // Call atatic method
             greeting::welcome();
+            echo "<br>"
         ?>
 
         <!-- PHP - More on Static Methods -->
         <?php
-            class greetting {
-                public static function {
-                    echo "Hello World!"; 
+            class greetings {
+                public static function welcome() {
+                    echo "Hello Philip!"; 
                 } 
+
+                public function __construct() {
+                    self::welcome();
+                }
             }
 
-            public function __construct ();
-            new greeting();
+            new greetings();
         ?>
     </body>
 </html>
