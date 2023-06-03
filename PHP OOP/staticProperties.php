@@ -49,7 +49,7 @@
             }
 
             // Get value of an static property directly via child class
-            echo x::$value;
+            echo x::$value . "<br>";
 
             // or get value of static property 
             $x = new x();
