@@ -1,18 +1,3 @@
-<?php
-    namespace Html;
-    class Table {
-        public $title = "";
-        public $numRows = 0;
-        public function message() {
-            echo "<p>Table '{$this->title}' has {$this->numRows} rows.</p>";
-        }
-    }
-
-    $table = new Table();
-    $table->title = "My table";
-    $table->numRows = 5;
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -23,8 +8,17 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <!-- PHP - Using Iterables -->
         <?php
-            $table->message();
+            function printItersble(iterable $myIterable) {
+                foreach ($myIterable as $item) {
+                    echo $item;
+                }
+            }
+
+            $arr = ["a", "b", "c"];
+            printItersble($arr);
+          
         ?>
     </body>
 </html>
