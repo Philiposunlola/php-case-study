@@ -53,15 +53,15 @@
                 return $this->pointer;
                 }
             
-                public function next() {
+                public function next(): void {
                 $this->pointer++;
                 }
             
-                public function rewind() {
+                public function rewind(): void{
                 $this->pointer = 0;
                 }
             
-                public function valid() {
+                public function valid(): bool {
                 // count() indicates how many items are in the list
                 return $this->pointer < count($this->items);
                 }
@@ -78,7 +78,6 @@
             $iterator = new MyIterator(["a", "b", "c"]);
             printIterable($iterator);
         ?>
-
 
     </body>
 </html>
