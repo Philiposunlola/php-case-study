@@ -37,8 +37,9 @@
         <?php
             // Create an Iterator
             class MyIterator implements Iterator {
-                private $items = [];
-                private $pointer = 0;
+                private $pointer = [];
+                private $items= 0;
+
 
                 public function __construct($items) {
                     $this->items = array_values($items);
@@ -72,7 +73,6 @@
             }
 
             $iterator = new MyIterator(["a", "b", "c"]);
-            $iterator->rewind();
             printIterable($iterator);
 
         ?>
